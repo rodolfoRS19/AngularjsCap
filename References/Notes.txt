@@ -1,0 +1,4 @@
+** ngRoute - Start ** // Esto va ir despues del tema de Directivas (Casi final de la presentacion)
+    Es un service de angular que da la habilidad de navegacion entre las platillas, ademas de dotar al framework con la habilidad de ser "SinglePage" por medio de la directiva ngView.
+    ** Se debe de agregar la libreria angular-route.js**
+    ** Se utiliza conjutamente con el service $routeProvider**
