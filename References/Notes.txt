@@ -2,3 +2,29 @@
     Es un service de angular que da la habilidad de navegacion entre las platillas, ademas de dotar al framework con la habilidad de ser "SinglePage" por medio de la directiva ngView.
     ** Se debe de agregar la libreria angular-route.js**
     ** Se utiliza conjutamente con el service $routeProvider**
+
+**------Start-Intro-----**
+Angularjs es un framework desarrollado por Google.
+Es orientado al desarrollo de aplicaciones web
+Enfocado a aplicaciones SPA(Single Page App)
+Utiliza la arquitetura MVC(Model View Controller)
+Posee la habilidad de extender las caracteristicas que ya posee el HTML.
+Es una aplicación que tiene como objetivo la modularidad de sus componentes
+
+***------Start-Features------**
+    +binding expression({{}}
+    + Two-Way Data Binding
+    + Moduling
+    + Dependency Injection(DI)
+    + Directives
+    +Services
+    +Filters
+
+
+
+**---(parte de las directivas) ---**
+  ---->ngApp<-----
+    Directiva que el indica a angular el root de la aplicacion, además nos da la oportunidad de indicar si angular
+    va a manejar toda la pagina html o parte de ella.
+**---fin---**
+

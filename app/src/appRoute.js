@@ -4,25 +4,24 @@
 var myApp = angular.module('entryPointApp',['ui.router']);
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
+    debugger;
     //
     // For any unmatched url, redirect to /state1
-    $urlRouterProvider.otherwise("/entryState");
+    $urlRouterProvider.otherwise("/home");
     //
     // Now set up the states
     $stateProvider
-
-    $stateProvider
-        .state('entryState', {
-            url: "/home",
-            templateUrl: "index.html"
-        })
-
-        .state('state1', {
-            url: "/state1",
-            templateUrl: "templates/startPoint.html"
+        .state('presentacion', {
+            url: "/presentacion",
+            templateUrl: "templates/presentacion.html"
         })
         .state('state2', {
             url: "/state2",
-            templateUrl: "templates/endPoint.html"
+            templateUrl: "templates/ejemplos.html"
+        })
+
+        .state('home', {
+            url: "/home",
+            templateUrl: "templates/home.html"
         })
 });
