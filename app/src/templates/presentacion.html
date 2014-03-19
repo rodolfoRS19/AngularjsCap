@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container" ng-controller="presentationCtrl">
     <div class="row">
         <div id="historyAngularjs" class="col-md-12">
             <h1 class="h1">Intro</h1>
             <div class="tittle-divider"></div>
-            <p style="margin-top:4px;">
+            <p class="margin-paragraph">
                 Angular un framework que nacio en el 2009, la empresa que se le da soporte es Google.
                 Tiene la capacidad de brindarnos la posibilidad de extender las funcionalidades del html,
                 es un framework que tiene como objetivo la modularidad de sus componentes. para brindarnos ciertas
@@ -13,8 +13,17 @@
             <p>Es orientado a las aplicacion Single Page App(SPA).</p>
             <p>Utiliza la arquitectura MVC(Model View Controller)</p>
             <p> </p>
-
-
+        </div>
+        <div id="basicsFeatures" class="col-md-12">
+            <h1 class="h1">Caracteristicas</h1>
+            <div class="tittle-divider"></div>
+            <div class="col-md-12">
+                <ul>
+                    <li ng-repeat="feature in features">
+                        {{feature.name}}
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

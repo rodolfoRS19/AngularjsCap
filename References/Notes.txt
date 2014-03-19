@@ -12,7 +12,7 @@ Posee la habilidad de extender las caracteristicas que ya posee el HTML.
 Es una aplicación que tiene como objetivo la modularidad de sus componentes
 
 ***------Start-Features------**
-    +binding expression({{}}
+    + binding expression({{}}
     + Two-Way Data Binding
     + Moduling
     + Dependency Injection(DI)
