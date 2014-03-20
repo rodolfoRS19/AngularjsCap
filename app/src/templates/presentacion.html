@@ -1,6 +1,6 @@
-<div class="container" ng-controller="presentationCtrl">
-    <div class="row">
-        <div id="historyAngularjs" class="col-md-12">
+<div class="container">
+    <div class="col-md-12">
+        <div id="historyAngularjs" class="col-md-10">
             <h1 class="h1">Intro</h1>
             <div class="tittle-divider"></div>
             <p class="margin-paragraph">
@@ -14,13 +14,13 @@
             <p>Utiliza la arquitectura MVC(Model View Controller)</p>
             <p> </p>
         </div>
-        <div id="basicsFeatures" class="col-md-12">
+        <div id="basicsFeatures" class="col-md-10">
             <h1 class="h1">Caracteristicas</h1>
             <div class="tittle-divider"></div>
             <div class="col-md-12">
-                <ul>
-                    <li ng-repeat="feature in features">
-                        {{feature.name}}
+                <ul class="margin-paragraph list-font">
+                    <li ng-repeat="feature in feature">
+                        <label>{{feature.name}}</label>
                     </li>
                 </ul>
             </div>

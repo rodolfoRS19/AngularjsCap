@@ -1,13 +1,11 @@
 {
-    "data":{
-        "basicFeatures":  [
-            {"name" : "Expression {{ }}"},
-            {"name" : "Two-Way Data Binding"},
-            {"name" : "Modules"},
-            {"name" : "Dependency Injection (DI)"},
-            {"name" : "Directives"},
-            {"name" : "Services"},
-            {"name" : "Filters"}
-        ]
-    }
+   "basicFeatures":  [
+        {"name" : "Expression {{ }}"},
+        {"name" : "Two-Way Data Binding"},
+        {"name" : "Modules"},
+        {"name" : "Dependency Injection (DI)"},
+        {"name" : "Directives"},
+        {"name" : "Services"},
+        {"name" : "Filters"}
+   ]
 }

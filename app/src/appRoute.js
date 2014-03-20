@@ -1,7 +1,7 @@
 /**
  * Created by Rodolfo on 13/03/14.
  */
-var myApp = angular.module('entryPointApp',['ui.router']);
+var myApp = angular.module('entryPointApp',['ui.router','presentationModule']);
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
     debugger;
@@ -13,7 +13,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('presentacion', {
             url: "/presentacion",
-            templateUrl: "templates/presentacion.html"
+            templateUrl: "templates/presentacion.html",
+            controller:'presentationCtrl'
         })
         .state('state2', {
             url: "/state2",

@@ -3,16 +3,18 @@
  */
 'use strict';
 
-angular.module('presentationModule',[])
+var presentationModule = angular.module('presentationModule',[])
 
-    .controller('presentationCtrl',['$scope','$http',function($scope,$http){
+        presentationModule.controller('presentationCtrl',function presentationCtrl($scope,$http){
 
-        $http({
-            method:'GET',
-            url:'../../testData/basicsFeatures.json'
-        })
-         .success(function(response){
-            $scope.feature = response.data.basicFeatures;
-         })
+            $http({
+                method:'GET',
+                url:'../../app/src/testData/basicsFeatures.json'
+            })
+             .success(function(response){
+                debugger;
+                $scope.feature = response.basicFeatures;
+                return $scope.feature;
+             })
 
-    }]);
+        });
