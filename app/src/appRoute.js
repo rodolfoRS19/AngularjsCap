@@ -4,7 +4,6 @@
 var myApp = angular.module('entryPointApp',['ui.router','presentationModule']);
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
-    debugger;
     //
     // For any unmatched url, redirect to /state1
     $urlRouterProvider.otherwise("/home");
@@ -16,8 +15,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: "templates/presentacion.html",
             controller:'presentationCtrl'
         })
-        .state('state2', {
-            url: "/state2",
+        .state('examples', {
+            url: "/examples",
             templateUrl: "templates/ejemplos.html"
         })
 

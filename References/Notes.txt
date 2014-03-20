@@ -21,6 +21,11 @@ Es una aplicación que tiene como objetivo la modularidad de sus componentes
     +Filters
 
 
+***----binding expression---***
+Tiene context, en comparación con las expresiones de javascript que son evaluadas  dentro del contexto global window, las expresiones de angular son evaluadas en el contexto del $scope
+No se puden usar blucles, condicionales o excepciones en las expresiones
+Se pueden usar filtros, usados frecuentemente para dar formate o filtrar busquedas.
+
 
 **---(parte de las directivas) ---**
   ---->ngApp<-----

@@ -1,11 +1,11 @@
 {
    "basicFeatures":  [
-        {"name" : "Expression {{ }}"},
-        {"name" : "Two-Way Data Binding"},
-        {"name" : "Modules"},
-        {"name" : "Dependency Injection (DI)"},
-        {"name" : "Directives"},
-        {"name" : "Services"},
-        {"name" : "Filters"}
+        {"name" : "Expresiones {{ }}"},
+        {"name" : "Baindeo de Datos"},
+        {"name" : "Modulos"},
+        {"name" : "Inyeccion de Dependencias (ID)"},
+        {"name" : "Directivas"},
+        {"name" : "Servicios"},
+        {"name" : "Filtros"}
    ]
 }

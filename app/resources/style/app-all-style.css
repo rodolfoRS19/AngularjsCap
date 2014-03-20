@@ -61,3 +61,9 @@ p {
 .margin-paragraph{
     padding-top: 30px;
 }
+
+.example-box{
+    border:solid 1px #9e2c26;
+    border-radius: 3px;
+}
+

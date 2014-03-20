@@ -12,9 +12,12 @@ var presentationModule = angular.module('presentationModule',[])
                 url:'../../app/src/testData/basicsFeatures.json'
             })
              .success(function(response){
-                debugger;
                 $scope.feature = response.basicFeatures;
                 return $scope.feature;
              })
+
+        });
+
+        presentationModule.controller('expressionCtrl',function expressionCtrl($scope){
 
         });
