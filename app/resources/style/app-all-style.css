@@ -32,6 +32,12 @@
     border-color: #670411;
 }
 
+.button-app{
+    background-color: #9e2c26;
+    border-color: #670411;
+    font-family: 'lemon', cursive;
+}
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
