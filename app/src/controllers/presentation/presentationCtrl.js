@@ -3,9 +3,9 @@
  */
 'use strict';
 
-var presentationModule = angular.module('presentationModule',[])
+  angular.module('presentationModule',['appServiceModule'])
 
-        presentationModule.controller('presentationCtrl',function presentationCtrl($scope,$http){
+        .controller('presentationCtrl',['$scope','$http',function($scope,$http){
 
             $http({
                 method:'GET',
@@ -15,9 +15,9 @@ var presentationModule = angular.module('presentationModule',[])
                 $scope.feature = response.basicFeatures;
                 return $scope.feature;
              })
-        });
+        }])
 
-        presentationModule.controller('expressionCtrl',function expressionCtrl($scope,$http){
+        .controller('expressionCtrl',['$scope','$http','formatStringFactory',function($scope,$http,formatStringFactory){
 
             $scope.templates = {
                 expressionUrl:  "../../app/src/templates/ejemplos/expression/expression.html"
@@ -29,6 +29,10 @@ var presentationModule = angular.module('presentationModule',[])
                     $scope.ExpressionSwitchValue = "index.html";
                     $scope.loadExpressionIndex();
                 }
+
+                if(argIdContent = "app.js"){
+
+                }
             };
 
             $scope.loadExpressionIndex = function(){
@@ -38,23 +42,11 @@ var presentationModule = angular.module('presentationModule',[])
                     url:'../../app/src/testData/ExampleText/expression/index.txt'
                 })
                     .success(function(response){
-                        $scope.indexData= $scope.doLinesText(response);
+                        $scope.indexData= formatStringFactory.doLinesText(response);
                         return $scope.indexData;
                     })
+            };
 
-                $scope.doLinesText = function(argText){
-                    debugger;
-                    var lines = [];
-                    var index = 0;
-                    while(argText.length > 0){
-                        var startIndex = 0;
-                        var endIndex = argText.indexOf("\n");
-                        lines[index] = argText.substring(startIndex, endIndex);
-                        index++
-                    }
+            $scope.loadExpression
 
-                    return lines;
-                }
-            }
-
-        });
+        }]);

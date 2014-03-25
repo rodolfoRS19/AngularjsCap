@@ -46,8 +46,8 @@
                         style="margin-bottom: 5px;">app.js</button>
 
                 <div class="well col-md-12 col-offset-3" ng-switch on="ExpressionSwitchValue">
-                    <div ng-switch-when="index.html">{{indexData}}
-                        <p ng-repeat="indexData in lines">{{lines}}</p>
+                    <div ng-switch-when="index.html">
+                        <p ng-repeat="indexData in indexData">{{indexData}}</p>
                     </div>
                     <div ng-switch-default>por defecto</div>
                 </div>
