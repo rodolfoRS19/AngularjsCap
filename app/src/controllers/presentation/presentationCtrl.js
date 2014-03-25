@@ -7,11 +7,6 @@ var presentationModule = angular.module('presentationModule',[])
 
         presentationModule.controller('presentationCtrl',function presentationCtrl($scope,$http){
 
-
-            $scope.templates = {
-                expressionUrl:  "../../app/src/templates/ejemplos/expression/expression.html"
-            };
-
             $http({
                 method:'GET',
                 url:'../../app/src/testData/basicsFeatures.json'
@@ -20,7 +15,13 @@ var presentationModule = angular.module('presentationModule',[])
                 $scope.feature = response.basicFeatures;
                 return $scope.feature;
              })
+        });
 
+        presentationModule.controller('expressionCtrl',function expressionCtrl($scope,$http){
+
+            $scope.templates = {
+                expressionUrl:  "../../app/src/templates/ejemplos/expression/expression.html"
+            };
 
             $scope.onChangeExpressionContent = function(argIdContent){
                 $scope.ExpressionSwitchValue = null;
@@ -31,30 +32,29 @@ var presentationModule = angular.module('presentationModule',[])
             };
 
             $scope.loadExpressionIndex = function(){
-                $scope.indexData = {
-                    line: null
-                }
 
                 $http({
                     method:'GET',
                     url:'../../app/src/testData/ExampleText/expression/index.txt'
                 })
                     .success(function(response){
-                        $scope.indexData.line = $scope.splitTextLine(response);
-                        debugger;
+                        $scope.indexData= $scope.doLinesText(response);
                         return $scope.indexData;
                     })
-            }
 
-            $scope.splitTextLine = function(argText){
-                var lines;
-                for(var i = 0; i< argText.length; i++){
-                    lines = argText.split("\n");
+                $scope.doLinesText = function(argText){
+                    debugger;
+                    var lines = [];
+                    var index = 0;
+                    while(argText.length > 0){
+                        var startIndex = 0;
+                        var endIndex = argText.indexOf("\n");
+                        lines[index] = argText.substring(startIndex, endIndex);
+                        index++
+                    }
+
+                    return lines;
                 }
-                return lines;
             }
-        });
-
-        presentationModule.controller('expressionCtrl',function expressionCtrl($scope){
 
         });

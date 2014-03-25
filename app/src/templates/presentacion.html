@@ -38,7 +38,7 @@
                 Se pueden utilizar filtros en conjunto con las expresiones.
             </p>
 
-            <div class="example-box col-md-12">
+            <div class="example-box col-md-12" ng-controller="expressionCtrl">
                 <h2 class="h2" style="padding-left: 4px;">Ejemplo</h2>
                 <button type ="button" class="btn btn-group-sm btn-primary button-app"
                         style="margin-bottom: 5px;" ng-click="onChangeExpressionContent('index.html')">index.html</button>
@@ -47,7 +47,7 @@
 
                 <div class="well col-md-12 col-offset-3" ng-switch on="ExpressionSwitchValue">
                     <div ng-switch-when="index.html">{{indexData}}
-                        <p ng-repeat="indexData in lines">{{line}}</p>
+                        <p ng-repeat="indexData in lines">{{lines}}</p>
                     </div>
                     <div ng-switch-default>por defecto</div>
                 </div>
