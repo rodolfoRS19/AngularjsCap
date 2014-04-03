@@ -20,19 +20,8 @@
         .controller('expressionCtrl',['$scope','$http','formatStringFactory',function($scope,$http,formatStringFactory){
 
             $scope.templates = {
-                expressionUrl:  "../../app/src/templates/ejemplos/expression/expression.html"
-            };
-
-            $scope.onChangeExpressionContent = function(argIdContent){
-                $scope.ExpressionSwitchValue = null;
-                if(argIdContent == "index.html"){
-                    $scope.ExpressionSwitchValue = "index.html";
-                    $scope.loadExpressionIndex();
-                }
-
-                if(argIdContent = "app.js"){
-
-                }
+                expressionUrl:  "../../app/src/templates/ejemplos/expression/expression.html",
+                indexExample: "../../app/src/templates/ejemplos/expression/expressionExample.html"
             };
 
             $scope.loadExpressionIndex = function(){
@@ -47,6 +36,18 @@
                     })
             };
 
-            $scope.loadExpression
+          $scope.loadExpressionIndex();
 
-        }]);
+        }])
+
+        .controller('dataBindingCtrl',['$scope','$http','$window','$rootScope','formatStringFactory',
+          function($scope,$http,$window,$rootScope,formatStringFactory){
+
+          $scope.src = '../../app/resources/images/Two_Way_Data_Binding.jpg';
+
+          $scope.templates = {
+            dataBindingUrl:"../../app/src/templates/ejemplos/dataBinding/dataBinding.html",
+              indexExample:"../../app/src/templates/ejemplos/dataBinding/indexExample.html"
+          };
+
+      }])

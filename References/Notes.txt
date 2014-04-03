@@ -14,6 +14,8 @@ Es una aplicación que tiene como objetivo la modularidad de sus componentes
 ***------Start-Features------**
     + binding expression({{}}
     + Two-Way Data Binding
+    +Scopes(Herencia de Scopes, Root Scope... etc)
+    +Controllers
     + Moduling
     + Dependency Injection(DI)
     + Directives

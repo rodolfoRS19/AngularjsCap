@@ -41,18 +41,37 @@
             <div class="example-box col-md-12" ng-controller="expressionCtrl">
                 <h2 class="h2" style="padding-left: 4px;">Ejemplo</h2>
                 <button type ="button" class="btn btn-group-sm btn-primary button-app"
-                        style="margin-bottom: 5px;" ng-click="onChangeExpressionContent('index.html')">index.html</button>
-                <button type ="button" class="btn btn-group-sm btn-primary button-app"
-                        style="margin-bottom: 5px;">app.js</button>
+                        style="margin-bottom: 5px;">index.html</button>
 
-                <div class="well col-md-12 col-offset-3" ng-switch on="ExpressionSwitchValue">
-                    <div ng-switch-when="index.html">
-                        <p ng-repeat="indexData in indexData">{{indexData}}</p>
-                    </div>
-                    <div ng-switch-default>por defecto</div>
+                <div ng-include="templates.indexExample">
                 </div>
 
-                <div ng-include="templates.expressionUrl"></div>
+                <div class="col-md-12" ng-include="templates.expressionUrl" style="padding-bottom: 10px;"></div>
+            </div>
+        </div>
+        <div id="dataBinding" class="col-md-12" style="padding-top: 5px;" ng-controller="dataBindingCtrl">
+            <h1 class="h1">Data Binding</h1>
+            <div class="tittle-divider"></div>
+            <p class="margin-paragraph">
+                Two-way data binding, caracteristica que posee angular para mantener sincronizados los datos entre
+                el modelo y la vista.
+            </p>
+            <p>
+                Los cambios se van a ver reflejados en la vista si se modifica el modelo o vice versa. Por lo que
+                se dice que la vista es un reflejo del modelo.
+            </p>
+            <p>
+                Al ser la vista un reflejo del modelo, el controlador y la vista quedan independiente uno del otro.
+            </p>
+            <h2 class="h2">Data Binding en Angular</h2>
+            <img ng-src="{{src}}">
+
+            <div class="example-box col-md-12">
+                <h2 class="h2" style="padding-left: 4px;">Ejemplo</h2>
+                <button type ="button" class="btn btn-group-sm btn-primary button-app"
+                        style="margin-bottom: 5px;">index.html</button>
+                <div type="html" style="display: block;" ng-include="templates.indexExample"></div>
+                <div class="col-md-12" ng-include="templates.dataBindingUrl" style="padding-bottom: 10px;"></div>
             </div>
         </div>
     </div>
