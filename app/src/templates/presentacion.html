@@ -43,9 +43,9 @@
                 <button type ="button" class="btn btn-group-sm btn-primary button-app"
                         style="margin-bottom: 5px;">index.html</button>
 
-                <div ng-include="templates.indexExample">
+                <div class="example-inner-box">
+                    <img ng-src={{imagesExample.templateUrl}}>
                 </div>
-
                 <div class="col-md-12" ng-include="templates.expressionUrl" style="padding-bottom: 10px;"></div>
             </div>
         </div>
@@ -70,8 +70,46 @@
                 <h2 class="h2" style="padding-left: 4px;">Ejemplo</h2>
                 <button type ="button" class="btn btn-group-sm btn-primary button-app"
                         style="margin-bottom: 5px;">index.html</button>
-                <div type="html" style="display: block;" ng-include="templates.indexExample"></div>
+                <div class="example-inner-box">
+                    <img  ng-src="{{imagesExample.templateUrl}}">
+                </div>
                 <div class="col-md-12" ng-include="templates.dataBindingUrl" style="padding-bottom: 10px;"></div>
+            </div>
+        </div>
+        <div id="scope" class="col-md-12" style="padding-top: 5px;" ng-controller="scopeCtrl">
+            <h1 class="h1">Scope</h1>
+            <div class="tittle-divider"></div>
+            <p class="margin-paragraph">El concepto de "scope" representa en Angularjs el objeto que sirve de enlace
+            entre la vista y un controlador, además de ser el contexto donde viven las expresiones declaradas para
+            ese scope.</p>
+            <p>El "scope" es el responsable de realizar el data binding por medio del service "$watch" que se encarga de
+            observar cualquier cambio que sufra un modelo dentro del scope y actualiza ese cambio en el DOM. Para mayor
+            entendimiento sobre el tema se puden revisar la siguiente documentación:
+                <a href="https://docs.angularjs.org/guide/scope">AngularScope.</a></p>
+            <p>Dentro de la estructura del DOM puede que haya uno o más scopes anidados, angular maneja esta
+            particularidad con una jerarquia entre los scopes, donde el padre de la jerarqui es el rootScope, que existe
+            uno por cada aplicación de Angular.</p>
+            <p>Dentro de la jerarqui las expresiones son evaluadas dentro del scope que esta asociado al elemento del DOM,
+            si en ese scope no se encuentra la propiedad se sigue escalando hasta llegar al tope de la jerarquia.</p>
+            <img ng-src="{{imagesExample.hirachieUrl}}" style="margin-top: 10px; margin-bottom: 10px;">
+            <p>No solo la directiva "ng-controller" crea un nuevo scope para alguna sección en especifico del DOM.</p>
+            <p>En angularjs existen varias directivas que crean implicitamente nuevos scopes</p>
+            <h1 class="h1">Directivas</h1>
+            <div class="tittle-divider"></div>
+            <div class="col-md-12">
+                <ul class=" margin-paragraph list-font">
+                    <li ng-repeat="directive in directiveList">
+                        <label>{{directive.name}}</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-12">
+
+                </div>
+                <h1 class="h1">Gerarquia De Scopes</h1>
+                <div class="tittle-divider"></div>
+                <p class="margin-paragraph"></p>
             </div>
         </div>
     </div>

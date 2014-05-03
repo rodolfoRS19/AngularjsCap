@@ -1,0 +1,8 @@
+{
+    "directives":[
+        {"name": "ng-repeat"},
+        {"name":"ng-switch"},
+        {"name":"ng-view"},
+        {"name":"ng-include"}
+    ]
+}

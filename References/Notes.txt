@@ -35,3 +35,12 @@ Se pueden usar filtros, usados frecuentemente para dar formate o filtrar busqued
     va a manejar toda la pagina html o parte de ella.
 **---fin---**
 
+**--- Scopes ---**
+    En angular existe una gerarquia de "scopes"  esto significa que cualquier cambio en el scope padre se
+    podrá ver reflejado en los scope hijos.
+
+
+    (https://github.com/angular/angular.js/wiki/Understanding-Scopes) ---> referencia
+
+    No solo
+
